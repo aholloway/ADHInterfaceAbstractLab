@@ -1,6 +1,6 @@
 
 Objectives for Lab #1:
----------------------
+----------------------
    * Practice using abstraction by creating an Abstract super class and
      choosing an appropriate class name (should be a noun).
    * Practice identifying common properties and behaviors (methods) and placing
