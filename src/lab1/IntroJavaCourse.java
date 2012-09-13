@@ -3,11 +3,14 @@ package lab1;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
- * @version     1.00
+ * @Drew
+ * @version 2.00
  */
 public class IntroJavaCourse extends Course {
-    String courseName;
+
+    private static final double MIN_CREDITS = 0;
+    private static final double MAX_CREDITS = 5;
+    private String courseName;
     private String courseNumber;
     private double credits;
     private String prerequisites;
@@ -18,25 +21,33 @@ public class IntroJavaCourse extends Course {
     }
 
     public void setCourseNumber(String courseNumber) {
+        if (courseNumber == null || courseNumber.length() == 0) {
+            throw new IllegalArgumentException("course number cannot be null or empty");
+        };
         this.courseNumber = courseNumber;
     }
 
     public void setPrerequisites(String prerequisites) {
+        if (prerequisites == null || prerequisites.length() == 0) {
+            throw new IllegalArgumentException("prerequisites cannot be null or empty");
+        };
         this.prerequisites = prerequisites;
     }
 
-        public void setCredits(double credits) {
-        if(credits < 0 || credits > 5.0) {
+    public void setCredits(double credits) {
+        if (credits < MIN_CREDITS || credits > MAX_CREDITS) {
             System.out.println(
-                    "Error: credits must be in the range 0.5 to 4.0");
+                    "Error: credits must be in the range "+MIN_CREDITS+" to "+MAX_CREDITS);
             System.exit(0);
         }
         this.setCredits(credits);
     }
 
-    @Override
     public void setCourseName(String courseName) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+        if (courseName == null || courseName.length() == 0) {
+            throw new IllegalArgumentException("course name cannot be null or empty");
+        };
+        this.courseName = courseName;
 
+    }
 }
