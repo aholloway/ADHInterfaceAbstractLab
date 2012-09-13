@@ -6,12 +6,19 @@ package lab1;
  */
 public class StartUp {
 
+    enum courseType {
+
+        INTRO_TO_PROG, INTRO_TO_JAVA, ADV_JAVA
+    };
+
     public static void main(String[] args) {
 
         //instantiate GUI
         Gui gui = new Gui();
 
         String answer;
+
+
 
         //answer=gui.askUser("How are you?");
 
@@ -31,5 +38,12 @@ public class StartUp {
             }
         }
 
+
+    }
+
+    private static void startNewCourse(int courseType) {
+        if(courseType==StartUp.courseType.ADV_JAVA){
+            
+        }
     }
 }
