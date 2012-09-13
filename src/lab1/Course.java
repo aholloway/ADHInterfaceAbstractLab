@@ -2,14 +2,14 @@
 package lab1;
 
 /**
- *
+ * This abstract class contains pro
  * @author aholloway
  */
 public abstract class Course {
     private String courseName;
     private String courseNumber;
     private double credits;
-    private String prerequisites;
+    
 
     public final String getCourseName() {
         return courseName;
@@ -23,19 +23,10 @@ public abstract class Course {
         return credits;
     }
 
-    public final String getPrerequisites() {
-        return prerequisites;
-    }
-
     public abstract void setCourseName(String courseName);
 
     public abstract void setCourseNumber(String courseNumber);
 
     public abstract void setCredits(double credits);
 
-    public abstract void setPrerequisites(String prerequisites);
-    
-    
-   
-    
 }
