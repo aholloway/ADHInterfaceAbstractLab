@@ -1,14 +1,16 @@
-package lab1;
+package lab2;
+
 
 /**
  * This class demonstrates the other objects created in this package.
  * 
- * What is good about using an abstract superclass is that you can pass code
- * to all the objects that inherit from it that may be useful.  The problems arise
- * when you pass code that is not used by all subclasses and then needs to be 
- * overridden, or worse yet, is ignored by the creator of the subclass.  Since
- * the code is passed invisibly to all the subclasses, this is a real danger of 
- * using abstract classes.  We will favor interfaces over inheritance in this course.
+ * This class demonstrates the same thing as lab1, with the big change being using
+ * an interface instead of an abstract class.  Although interfaces may seem like a lot
+ * more work, there is a lot of flexibility with working with interfaces due to 
+ * multiple inheritance.  There is also NO danger of inheriting bad code as 
+ * all the code must be written in the implementing subclass.  However, if one
+ * desires to modify an interface, there is some danger, as all implementing classes
+ * will most likely be broken.
  *
  * @Drew Holloway
  */
