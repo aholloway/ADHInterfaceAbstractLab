@@ -1,6 +1,7 @@
 package lab1;
 
 /**
+ * This class demonstrates the other objects created in this package.
  *
  * @Drew Holloway
  */
@@ -11,13 +12,13 @@ public class StartUp {
         //instantiate GUI
         Gui gui = new Gui();
 
-        String answer;
+        String answer;//to hold answers to questions
 
-        String name;
+        String name;// to hold user's name.
         
         name=gui.askUser("Hello, what is your name?");
         
-        //validation of name
+        //validation of name would occur here
         
         gui.showMessage("Hello "+name+", you must be here to sign up for classes!");
         
@@ -76,7 +77,8 @@ public class StartUp {
                 }
             } else {
                 
-                //Process of elimination
+                //by process of elimination, they must be here for adv java.
+                
                 gui.showMessage("Then you must be here for Advanced Java!!!");
                 gui.showMessage("Let me sign you up!");
                 

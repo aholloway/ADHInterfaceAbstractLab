@@ -1,10 +1,18 @@
 package lab1;
 
 /**
- * Describe responsibilities here.
+ * This class has the responsibilities of getting and setting the name of the
+ * course and the course number. These methods are inherited from the superclass
+ * Course
  *
- * @Drew
- * @version 2.00
+ * Additionally, this class has the responsibility of getting and setting the
+ * number of credits (validating that the number is within the proper range)
+ *
+ * Another responsibility of this class is setting and getting the prerequisites
+ * for the course
+ *
+ * @author Drew
+ * @version 1.00
  */
 public class IntroJavaCourse extends Course {
 
@@ -19,13 +27,15 @@ public class IntroJavaCourse extends Course {
             + MIN_CREDITS + " to " + MAX_CREDITS;
 
     public IntroJavaCourse(String courseName, String courseNumber) {
+        // this object inherits the getters and setters for courseName and courseNumber
+        // from the superclass.  It actaully stores these values in the superclass
+        // object, but the course Name and number, but to anyone working with this
+        // class object, they would not know this, and it would function as expected,
+        // as if the getters and setters were written in this class.
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
     }
 
-    //getters are inherited from the superclass.  No more magic numbers in
-    //code below.  Also exceptions are thrown rather than outputting messages
-    //when entries are not valid
     public String getPrerequisites() {
         return prerequisites;
     }
