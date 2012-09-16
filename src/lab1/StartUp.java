@@ -6,11 +6,7 @@ package lab1;
  */
 public class StartUp {
 
-    enum courseType {
-
-        INTRO_TO_PROG, INTRO_TO_JAVA, ADV_JAVA
-    };
-
+    
     public static void main(String[] args) {
 
         //instantiate GUI
@@ -29,6 +25,15 @@ public class StartUp {
         answer = gui.askYesNo("Would you like to take Intro to Programming?");
         if (answer == "yes") {
             // take Intro to Programming Class
+            IntroToProgrammingCourse course=new IntroToProgrammingCourse("Intro to Programming","100");
+            //course.setCredits(6);//cause exception
+            course.setCredits(4);
+            //course.setPrerequisites("");//No pre-reqs can be set.
+            gui.showMessage("Very good.  You are taking "+course.getCourseName()+
+                    " which is course number "+ course.getCourseNumber() + " for " +
+                    course.getCredits() + " credits.");
+            
+            
         } else {
             answer = gui.askYesNo("Would you like to take Intro to Java?");
             if (answer == "yes") {
@@ -41,9 +46,7 @@ public class StartUp {
 
     }
 
-    private static void startNewCourse(int courseType) {
-        if(courseType==StartUp.courseType.ADV_JAVA){
-            
-        }
+    private static void startNewCourse(Gui gui, Course course) {
+        
     }
 }

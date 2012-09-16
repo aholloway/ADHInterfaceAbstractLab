@@ -32,12 +32,10 @@ public class IntroJavaCourse extends Course {
     //getters are inherited from the superclass.  No more magic numbers in
     //code below.  Also exceptions are thrown rather than outputting messages
     //when entries are not valid
-
     public String getPrerequisites() {
         return prerequisites;
     }
-    
-    
+
     public final void setCourseNumber(String courseNumber) {
         if (courseNumber == null || courseNumber.length() == 0) {
             throw new IllegalArgumentException(courseNumberNullException);
@@ -56,7 +54,8 @@ public class IntroJavaCourse extends Course {
         if (credits < MIN_CREDITS || credits > MAX_CREDITS) {
             throw new IllegalArgumentException(creditsNullException);
         }
-        this.setCredits(credits);
+        //this.setCredits(credits); this would cause an infinite loop.  D'oh!
+        this.credits = credits;
     }
 
     public final void setCourseName(String courseName) {
@@ -65,5 +64,16 @@ public class IntroJavaCourse extends Course {
         };
         this.courseName = courseName;
     }
-    
+
+    public final String getCourseName() {
+        return this.courseName;
+    }
+
+    public final String getCourseNumber() {
+        return this.courseNumber;
+    }
+
+    public final double getCredits() {
+        return this.credits;
+    }
 }

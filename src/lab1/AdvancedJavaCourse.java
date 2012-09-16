@@ -55,7 +55,8 @@ public class AdvancedJavaCourse extends Course {
         if (credits < MIN_CREDITS || credits > MAX_CREDITS) {
             throw new IllegalArgumentException(creditsNullException);
         }
-        this.setCredits(credits);
+        //this.setCredits(credits); this would cause an infinite loop.  D'oh!
+        this.credits=credits;
     }
 
     public final void setCourseName(String courseName) {
@@ -64,6 +65,17 @@ public class AdvancedJavaCourse extends Course {
         };
         this.courseName = courseName;
     }
-    
+
+    public final String getCourseName() {
+        return this.courseName;
+    }
+
+    public final String getCourseNumber() {
+        return this.courseNumber;
+    }
+
+    public final double getCredits() {
+        return this.credits;
+    }
     
 }
