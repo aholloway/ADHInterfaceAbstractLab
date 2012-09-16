@@ -15,13 +15,11 @@ public class IntroToProgrammingCourse extends Course {
     private String courseName;
     private String courseNumber;
     private double credits;
-    private static final String courseNumberNullException =
-            "Error: course number cannot be null of empty string";
+    
     private static final String creditsNullException =
             "Error: credits must be in the range "
             + MIN_CREDITS + " to " + MAX_CREDITS;
-    private static final String courseNameNullException =
-            "Error: course name cannot be null of empty string";
+    
 
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
@@ -31,12 +29,7 @@ public class IntroToProgrammingCourse extends Course {
     //getters are inherited from the superclass.  No more magic numbers in
     //code below.  Also exceptions are thrown rather than outputting messages
     //when entries are not valid
-    public final void setCourseNumber(String courseNumber) {
-        if (courseNumber == null || courseNumber.length() == 0) {
-            throw new IllegalArgumentException(courseNumberNullException);
-        };
-        this.courseNumber = courseNumber;
-    }
+    
 
     public final void setCredits(double credits) {
         if (credits < MIN_CREDITS || credits > MAX_CREDITS) {
@@ -46,19 +39,8 @@ public class IntroToProgrammingCourse extends Course {
         this.credits=credits;
     }
 
-    public final void setCourseName(String courseName) {
-        if (courseName == null || courseName.length() == 0) {
-            throw new IllegalArgumentException(courseNameNullException);
-        };
-        this.courseName = courseName;
-    }
-        public final String getCourseName() {
-        return this.courseName;
-    }
-
-    public final String getCourseNumber() {
-        return this.courseNumber;
-    }
+    
+    
 
     public final double getCredits() {
         return this.credits;
