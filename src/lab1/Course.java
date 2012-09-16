@@ -6,9 +6,12 @@ package lab1;
  * @author aholloway
  */
 public abstract class Course {
-    private String courseName;
-    private String courseNumber;
-    private double credits;
+    //It doesn't look like these fields will do much good here, as they are not
+    //used and I wouldn't want a subclass inheriting fields that it doesn't know
+    //what they are for  So I'll leave it to the subclasses to declare these fields.
+//    private String courseName;
+//    private String courseNumber;
+//    private double credits;
 
     
     
