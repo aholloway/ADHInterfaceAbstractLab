@@ -68,7 +68,6 @@ public class AdvancedJavaCourse extends Course implements HasPrerequisites {
         if (credits < MIN_CREDITS || credits > MAX_CREDITS) {
             throw new IllegalArgumentException(creditsNullException);
         }
-        //this.setCredits(credits); this would cause an infinite loop.  D'oh!
         this.credits = credits;
     }
 
