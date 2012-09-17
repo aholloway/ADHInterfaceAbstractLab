@@ -13,6 +13,16 @@ package lab3;
 
 public class IntroToProgrammingCourse extends Course {
 
+    /**
+     * The fields MIN_CREDITS, MAX_CREDITS, and credits should
+     * be declared at the subclass level, as they are get and set at this level.
+     * That allows added flexibility for validation logic to differ.  In this class,
+     * the MIN_CREDITS are set to 0.5 and MAX_CREDITS to 4.  But in another course,
+     * the range could differ.  Additionally, the error message that is used
+     * in this class should be declared here.  If any of these properties were
+     * declared at the superclass level, the subclass would not have access to
+     * them if they were declared private (as they should be).
+     */
     private static final double MIN_CREDITS = 0.5;
     private static final double MAX_CREDITS = 4;
     private double credits;
