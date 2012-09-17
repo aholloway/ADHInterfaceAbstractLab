@@ -39,11 +39,11 @@ public class AdvancedJavaCourse extends Course {
         this.setCourseNumber(courseNumber);
     }
 
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
 
-    public String getCapitalizedCourseName() {
+    public final String getCapitalizedCourseName() {
         return this.getCourseName().toUpperCase();
     }
 

@@ -36,7 +36,7 @@ public class IntroJavaCourse extends Course {
         this.setCourseNumber(courseNumber);
     }
 
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
 

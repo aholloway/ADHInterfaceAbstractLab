@@ -40,7 +40,7 @@ public class AdvancedJavaCourse implements Course {
         this.setCourseNumber(courseNumber);
     }
 
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
 
@@ -67,7 +67,7 @@ public class AdvancedJavaCourse implements Course {
     }
     
 
-    public String getCapitalizedCourseName() {
+    public final String getCapitalizedCourseName() {
         return this.getCourseName().toUpperCase();
     }
 

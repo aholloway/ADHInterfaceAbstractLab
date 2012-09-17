@@ -60,7 +60,7 @@ public class IntroJavaCourse implements Course {
     }
     
 
-    public String getPrerequisites() {
+    public final String getPrerequisites() {
         return prerequisites;
     }
 
