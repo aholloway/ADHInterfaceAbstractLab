@@ -11,7 +11,7 @@ package lab1;
  * @version 1.00
  */
 
-public class IntroToProgrammingCourse extends Course {
+public class IntroToProgrammingCourse extends ProgrammingCourse {
 
     private static final double MIN_CREDITS = 0.5;
     private static final double MAX_CREDITS = 4;

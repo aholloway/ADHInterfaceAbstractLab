@@ -13,7 +13,7 @@ package lab2;
  * @author Drew
  * @version 1.00
  */
-public class IntroJavaCourse implements Course {
+public class IntroJavaCourse implements ProgrammingCourse {
 
     private static final double MIN_CREDITS = 0;
     private static final double MAX_CREDITS = 5;

@@ -17,7 +17,7 @@ package lab3;
  * @author Drew
  * @version 1.00
  */
-public class AdvancedJavaCourse extends Course implements HasPrerequisites {
+public class AdvancedJavaCourse extends ProgrammingCourse implements HasPrerequisites {
     
     /**
      * The fields MIN_CREDITS, MAX_CREDITS, credits, and prerequisites should

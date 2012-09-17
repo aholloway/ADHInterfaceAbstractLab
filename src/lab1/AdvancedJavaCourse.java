@@ -17,7 +17,7 @@ package lab1;
  * @author Drew
  * @version 1.00
  */
-public class AdvancedJavaCourse extends Course {
+public class AdvancedJavaCourse extends ProgrammingCourse {
 
     private static final double MIN_CREDITS = 0.5;
     private static final double MAX_CREDITS = 4;

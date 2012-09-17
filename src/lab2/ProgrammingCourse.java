@@ -2,12 +2,11 @@ package lab2;
 
 
 /**
- * This interface has the relevant signatures for methods that any course
- * should have.
+ * more specific interface for Programming courses
  *
  * @author aholloway
  */
-interface Course {
+interface ProgrammingCourse {
 
     void setCourseName(String courseName);
 
